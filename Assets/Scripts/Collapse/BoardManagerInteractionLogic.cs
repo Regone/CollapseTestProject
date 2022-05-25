@@ -25,7 +25,7 @@ namespace Collapse {
             
             // Trigger blocks
             for (var i = 0; i < results.Count; i++) {
-                block.Triger(i);
+                results[i].Triger(i);
             }
 
             // Regenerate
