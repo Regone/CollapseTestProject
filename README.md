@@ -1,12 +1,18 @@
 # Collapse Test Project
 
-This project is a simplistic version of a collpase in Unity (2020.3)
+This project is a simplistic version of a collpase.
+
+- Built in Unity 2020.3.x.
+- The game will be tested only inside the unity editor, don't worry about anything else.
+- Please create a new project from this template (Find the green *"use this template"* button on this page) and complete the tasks blow, send us a link to the repo once you're done.
+- Ask for hints if you're stuck
+
+## The Game:
 - The board should start popuplated with a grid of blocks.
 - Clicking a block should "match" all connected neighboring blocks (up, right, down, left) and destroy them.
 - After a short delay the board should be repopulated.
-- The game will be tested only inside the unity editor
 
-Please create a new project from this template (Find the green *"use this template"* button on this page) and complete the following tasks, send us a link to the repo once you're done.
+## Tasks:
 
 1. The file *BoardManagerInteractionLogic.cs* contains an unimplemented critical function *FindChainRecursive* - please implement it using recursion.
 
