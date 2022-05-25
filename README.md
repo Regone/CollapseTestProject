@@ -4,6 +4,7 @@ This project is a simplistic version of a collpase in Unity (2020.3)
 - The board should start popuplated with a grid of blocks.
 - Clicking a block should "match" all connected neighboring blocks (up, right, down, left) and destroy them.
 - After a short delay the board should be repopulated.
+- The game will be tested only inside the unity editor
 
 Please fork this repo and complete the following tasks, send us a link to the repo once you're done.
 
