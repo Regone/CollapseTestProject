@@ -5,10 +5,10 @@ This project is a simplistic version of a collapse.
 - Built in Unity 2020.3.x.
 - The game will be tested only inside the unity editor, don't worry about anything else.
 - Please create a new project from this template (Find the green *"use this template"* button on this page) and complete the tasks below, send us a link to the repo once you're done.
+- Most of the basic functionality is already coded so this test can focus on quality over quantity.
 - Ask for hints if you're stuck.
 
 ## The Game:
-Most of the basic functionality is already coded so this test can focus on quality over quantity.
 
 - The board should start populated with a grid of blocks.
 - Clicking a block should "match" all connected neighboring blocks (up, right, down, left) and destroy them.
