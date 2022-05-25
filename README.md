@@ -5,7 +5,7 @@ This project is a simplistic version of a collpase.
 - Built in Unity 2020.3.x.
 - The game will be tested only inside the unity editor, don't worry about anything else.
 - Please create a new project from this template (Find the green *"use this template"* button on this page) and complete the tasks blow, send us a link to the repo once you're done.
-- Ask for hints if you're stuck
+- Ask for hints if you're stuck.
 
 ## The Game:
 - The board should start popuplated with a grid of blocks.
