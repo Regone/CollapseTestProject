@@ -3,9 +3,13 @@ using Collapse.Blocks;
 
 namespace Collapse {
     /**
-     * Partial class for convenience in the context of  this test - the BoardManager functions that need to be touched are in this file
+     * Partial class for separating the main functions that are needed to be modified in the context of this test
      */
     public partial class BoardManager {
+        
+        /**
+         * Trigger a bomb
+         */
         public void TriggerBomb(Bomb bomb) {
             //TODO: Implement
         }
@@ -14,23 +18,20 @@ namespace Collapse {
          * Trigger a match
          */
         public void TriggerMatch(Block block) {
+            // Find all blocks in this match
             var results = new List<Block>();
             var tested = new List<(int row, int col)>();
             FindChainRecursive(block.Type, block.GridPosition.x, block.GridPosition.y, tested, results);
+            
+            // Trigger blocks
             for (var i = 0; i < results.Count; i++) {
-                var result = results[i];
-                MatchBlock(result, i);
+                block.Triger(i);
             }
 
+            // Regenerate
             ScheduleRegenerateBoard();
         }
 
-        private void MatchBlock(Block block, int index) {
-            ClearBlockFromGrid(block);
-
-            // Trigger block match animation
-            block.Triger(index);
-        }
 
         /**
          * Recursively collect all neighbors of same type to build a full list of blocks in this "chain" in the results list

@@ -8,7 +8,8 @@ using Random = UnityEngine.Random;
 
 namespace Collapse {
     /**
-     * BoardManager keeps track and manages creation deletion and interaction of all game pieces
+     * BoardManager keeps track and manages creation deletion and interaction of all game pieces.
+     * There should be no reason to modify this file in the context of this test.
      */
     public partial class BoardManager : MonoBehaviour {
         [SerializeField]
@@ -47,6 +48,9 @@ namespace Collapse {
             Debug.Log("Remove me for bonus points!");
         }
 
+        /**
+         * Clear block from local arrays, remember to destroy the GameObject yourself!
+         */
         public void ClearBlockFromGrid(Block block) {
             // Clear grid
             blocks[block.GridPosition.x, block.GridPosition.y] = null;

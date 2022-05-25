@@ -3,6 +3,9 @@ using DG.Tweening;
 using UnityEngine;
 
 namespace Collapse.Blocks {
+    /**
+     * Bomb specific behavior
+     */
     public class Bomb : Block {
         [SerializeField]
         private Transform Sprite;
@@ -38,8 +41,8 @@ namespace Collapse.Blocks {
         }
 
         public override void Triger(float delay) {
-            if (Triggered) return;
-            Triggered = true;
+            if (IsTriggered) return;
+            IsTriggered = true;
             BoardManager.Instance.TriggerBomb(this);
         }
     }
