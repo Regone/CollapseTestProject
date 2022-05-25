@@ -8,6 +8,8 @@ This project is a simplistic version of a collpase.
 - Ask for hints if you're stuck.
 
 ## The Game:
+Most of the basic functionality is already coded so this test can focus on quality over quantity.
+
 - The board should start popuplated with a grid of blocks.
 - Clicking a block should "match" all connected neighboring blocks (up, right, down, left) and destroy them.
 - After a short delay the board should be repopulated.
