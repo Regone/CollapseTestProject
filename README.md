@@ -6,7 +6,7 @@ This project is a simplistic version of a collpase in Unity (2020.3)
 - After a short delay the board should be repopulated.
 - The game will be tested only inside the unity editor
 
-Please fork this repo and complete the following tasks, send us a link to the repo once you're done.
+Please create a new project from this template (Find the green "use template" button on this page) and complete the following tasks, send us a link to the repo once you're done.
 
 1. The file *BoardManagerInteractionLogic.cs* contains an unimplemented critical function *FindChainRecursive* - please implement it using recursion.
 
