@@ -18,7 +18,7 @@ This project is a simplistic version of a collapse.
 
 ## Tasks:
 
-1. The file *BoardManagerInteractionLogic.cs* contains an unimplemented critical function *FindChainRecursive* - please implement it using recursion.
+1. The file *BoardManagerInteractionLogic.cs* contains an unimplemented critical function *FindChainRecursive* - please implement it using recursion, see code comments for more info.
 
 2. Now that clicking blocks makes whole groups match and disappear correctly we can see that the blocks disappear instantaneously and that's not the experience we're after - please improve the visuals of the disappearance of blocks in any way you see fit. (Hint: the project is making heavy use of DOTween)
 
