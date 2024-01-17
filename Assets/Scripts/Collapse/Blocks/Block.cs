@@ -11,7 +11,7 @@ namespace Collapse.Blocks {
         public BlockType Type;
         public Vector2Int GridPosition;
 
-        protected bool IsTriggered;
+        public bool IsTriggered;
         
         /**
          * Start
@@ -54,12 +54,14 @@ namespace Collapse.Blocks {
             if (IsTriggered) return;
             IsTriggered = true;
             
-            // Clear from board
-            BoardManager.Instance.ClearBlockFromGrid(this);
+            transform.DOScale(Vector3.zero,delay).SetEase(Ease.InBack).OnComplete(() => {
+                // Clear from board
+                BoardManager.Instance.ClearBlockFromGrid(this);
             
-            // Kill game object
-            transform.DOKill();
-            Destroy(gameObject);
+                // Kill game object
+                transform.DOKill();
+                Destroy(gameObject);
+            });
         }
     }
 }

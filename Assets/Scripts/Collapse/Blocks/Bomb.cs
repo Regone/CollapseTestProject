@@ -26,7 +26,7 @@ namespace Collapse.Blocks {
         }
 
         protected override void OnMouseUp() {
-            Shake();
+            Shake(Triger);
         }
         
         /**
@@ -40,10 +40,24 @@ namespace Collapse.Blocks {
             };
         }
 
+        public void Triger()
+        {
+            Triger(0);
+            
+        }
+
         public override void Triger(float delay) {
             if (IsTriggered) return;
             IsTriggered = true;
+            
             BoardManager.Instance.TriggerBomb(this);
+            
+            // Clear from board
+            BoardManager.Instance.ClearBlockFromGrid(this);
+            
+            // Kill game object
+            transform.DOKill();
+            Destroy(gameObject);
         }
     }
 }

@@ -325,6 +325,7 @@ MonoBehaviour:
   BoardSize: {x: 11, y: 11}
   Spacing: {x: 0.55, y: 0.55}
   BoardRegenerationDelay: 0.5
+  tiggerFadeTime: 0.075
 --- !u!4 &1557776733
 Transform:
   m_ObjectHideFlags: 0

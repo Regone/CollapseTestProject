@@ -45,7 +45,6 @@ namespace Collapse {
         private void Start() {
             // Fill board on start
             ScheduleRegenerateBoard();
-            Debug.Log("Remove me for bonus points!");
         }
 
         /**
@@ -89,8 +88,8 @@ namespace Collapse {
          * Coroutine that waits a little and then regenerates all missing blocks on the board.
          * This should NOT be called directly but scheduled with ScheduleRegenerateBoard()
          */
-        private IEnumerator RegenerateBoard() {
-            yield return new WaitForSeconds(BoardRegenerationDelay);
+        private IEnumerator RegenerateBoard(float delay = 0) {
+            yield return new WaitForSeconds(BoardRegenerationDelay+delay);
             
             for (var col = 0; col < BoardSize.x; col++) {
                 for (var row = 0; row < BoardSize.y; row++) {
@@ -106,12 +105,31 @@ namespace Collapse {
         /**
          * Schedules a board regeneration after a delay, cancels existing pending schedules
          */
-        private void ScheduleRegenerateBoard() {
+        private void ScheduleRegenerateBoard(float delay=0) {
             if (scheduledRegeneration != null) {
                 StopCoroutine(scheduledRegeneration);
                 scheduledRegeneration = null;
             }
-            scheduledRegeneration = StartCoroutine(RegenerateBoard());
+            scheduledRegeneration = StartCoroutine(RegenerateBoard(delay));
+        }
+
+        Block GetBlockOnGrid(int col, int row)
+        {
+            if(col < 0 || col > BoardSize.x-1 || row < 0 || row > BoardSize.y-1)
+            {
+                return null;
+            }
+            else if(blocks[col, row] == null)
+            {
+                return null;
+            } else if (blocks[col, row].IsTriggered)
+            {
+                return null;
+            }
+            else
+            {
+                return blocks[col, row];
+            }
         }
     }
 }
